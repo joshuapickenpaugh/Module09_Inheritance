@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Joshua Pickenpaugh, IN2017, Adv.C#
+//October 7th, 2015, Inheritance
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +19,14 @@ namespace Module08_Inheritance
 
             //Inherited from Animal class:
             duck1.Sound();
+            duck1.dude();
+            
             
             Console.ReadKey();
         }
     }
 
-    class Animal
+    class Animal : Dude
     {
         public void Sound()
         {
@@ -29,6 +34,15 @@ namespace Module08_Inheritance
         }
     }
 
+    class Dude
+    {
+        public void dude()
+        {
+            Console.WriteLine("DUDE");
+        }
+    }
+
+    //Derived class is "Duck":
     class Duck : Animal
     {
         public void Hello()
